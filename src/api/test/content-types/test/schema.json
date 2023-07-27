@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tests",
+  "info": {
+    "singularName": "test",
+    "pluralName": "tests",
+    "displayName": "test",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "string": {
+      "type": "string"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "oneWay": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blah.blah"
+    },
+    "manyWay": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blah.blah"
+    },
+    "oneToOneS": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blah.blah",
+      "inversedBy": "oneToOneD"
+    },
+    "oneToManyS": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blah.blah",
+      "mappedBy": "manyToOneD"
+    },
+    "manyToOneS": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::blah.blah",
+      "inversedBy": "oneToManyD"
+    },
+    "manyToManyS": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blah.blah",
+      "inversedBy": "manyToManyD"
+    },
+    "level1": {
+      "displayName": "level1",
+      "type": "component",
+      "repeatable": false,
+      "component": "compo.level1"
+    }
+  }
+}

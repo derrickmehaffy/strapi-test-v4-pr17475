@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_compo_level1s",
+  "info": {
+    "displayName": "level1",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "string": {
+      "type": "string"
+    },
+    "oneWayCompo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blah.blah"
+    },
+    "level2": {
+      "displayName": "level2",
+      "type": "component",
+      "repeatable": true,
+      "component": "compo.level2"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_compo_level2s",
+  "info": {
+    "displayName": "level2",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "string": {
+      "type": "string"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "manyWay": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blah.blah"
+    }
+  }
+}

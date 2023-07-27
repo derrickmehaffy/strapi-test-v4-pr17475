@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blahs",
+  "info": {
+    "singularName": "blah",
+    "pluralName": "blahs",
+    "displayName": "blah"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "string": {
+      "type": "string"
+    },
+    "oneToOneD": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::test.test",
+      "mappedBy": "oneToOneS"
+    },
+    "manyToOneD": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::test.test",
+      "inversedBy": "oneToManyS"
+    },
+    "oneToManyD": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::test.test",
+      "mappedBy": "manyToOneS"
+    },
+    "manyToManyD": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::test.test",
+      "mappedBy": "manyToManyS"
+    }
+  }
+}
